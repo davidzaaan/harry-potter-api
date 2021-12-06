@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block header %}
+<h1>Hello characters</h1>
+{% endblock header %}
+
+{% block content %}
+<div class="content">
+    {% if chars %}
+        {% for character in chars %}
+            <div class="card" style="width: 18rem;">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title">{{character.name }}</h5>
+                <p class="card-text">{{ character.species }} House: {{ character.house }}</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block header %}
+<header class="students-header">
+    <h1>{{ title }}</h1>
+    <nav>
+    <a href="{{ url_for('index')}}">All Characters</a>
+    <a href="/staff/">Hogwarts Staff</a>
+    <a href="/houses/">Houses</a>
+    </nav>
+</header>
+{% endblock header %}
+
+{% block content %}
+<div class="students-main-content">
+    <div class="house-section" id="gryffindor">
+        <h2>Gryffindor</h2>
+        <button type="button" class="btn btn-primary">See</button>
+    </div>
+    <div class="house-section" id="slytherin">
+        <h2>Slytherin</h2>
+        <button type="button" class="btn btn-primary">See</button>
+    </div>
+    <div class="house-section" id="hufflepuff">
+        <h2>Hufflepuff</h2>
+        <button type="button" class="btn btn-primary">See</button>
+    </div>
+    <div class="house-section" id="ravenclaw">
+        <h2>RavenClaw</h2>
+        <button type="button" class="btn btn-primary">See</button>
+    </div>
+</div>
+{% endblock content %}

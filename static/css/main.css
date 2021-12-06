@@ -1,0 +1,135 @@
+body {
+    font-family: "Archivo Black", sans-serif;
+  
+    font-family: "MedievalSharp", cursive;
+    font-weight: lighter;
+    /*max-width: 650px;*/
+    margin: 0 auto;
+    /*padding: 0 16px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+
+  h1 {
+    color: #FFD700;
+  }
+  
+  header {
+    background: #252422;
+  }
+  
+  header nav {
+    margin: 15px;
+  }
+  
+  header a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: aliceblue;
+    transition: 0.3s;
+  }
+  
+  header a:hover {
+    opacity: 0.6;
+  }
+  
+  footer {
+    margin: 0 10px 10px 10px;
+    align-self: center;
+    color: #5e6472;
+    width: 80%;
+    border-top: 1px solid #333333;
+    text-align: center;
+  }
+  
+  .content {
+    width: 70vw;
+    height: 70vh;
+    background: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px auto;
+    border: 2px solid black;
+    box-shadow: 10px 5px 5px #333333;
+    overflow-y: scroll;
+  }
+  
+  .card {
+    height: 250px;
+    margin: 20px;
+    background: green;
+  }
+
+  /* students page settings */
+  .students-main-content {
+    width: 78vw;
+    height: 80vh;
+    background: red;
+    margin: auto;
+    display: flex;
+  }
+
+  .students-main-content button {
+    width: 100px;
+  }
+
+  .students-header {
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    padding: 5px;
+    justify-content: space-between;
+  }
+
+  .students-header h1{
+    font-size: 1.8rem;
+    margin: auto 10px;
+  }
+
+  .house-section {
+    height: 100%;
+    width: 25%;
+    transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .house-section h2 {
+    margin-top: 10px;
+  }
+
+  .house-section:hover {
+    width: 40%;
+  }
+
+  #ravenclaw {
+    background-image: url('../images/ravenclaw.jpg');
+    background-size:cover;
+    color: #f7d308d0;
+  }
+
+  #hufflepuff {
+    background-image: url('../images/hufflepuff.jpg');
+    background-size:cover;
+    
+  }
+
+  #slytherin {
+    background-image: url('../images/slytherin.jpg');
+    background-size:cover;
+    color: antiquewhite;
+  }
+
+  #gryffindor {
+    color: #FFD700;
+    background-image: url('../images/gryffindor.jpg');
+    background-size:cover;
+
+  }
+
+  
