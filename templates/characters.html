@@ -23,7 +23,7 @@
                 {% if character.house %}
                     <p class="card-text">{{ character.house }}</p>
                 {% endif %}
-                <a href="{{ url_for('character', name=character.name) }}" class="btn btn-primary">See more about {{ character.name }}</a>
+                <a href="{{ url_for('character', name=character.name) }}" class="btn btn-warning">See more about {{ character.name }}</a>
             </div>
         </div>
         {% endfor %}

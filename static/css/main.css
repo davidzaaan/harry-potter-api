@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    background-color: #062726;
   }
 
   h1 {
@@ -39,39 +40,60 @@ body {
   footer {
     margin: 0 10px 10px 10px;
     align-self: center;
-    color: #5e6472;
+    color: #f7d308d0;
     width: 80%;
-    border-top: 1px solid #333333;
+    border-top: 1px solid #f7d308d0;
     text-align: center;
   }
 
+  /* index page styling */
   .index-content {
     text-align: center;
+    color: #f7d308d0;
+  }
+
+  .index-header {
+    display: flex;
   }
   
   .content {
     width: 70vw;
     height: 70vh;
-    background: red;
+    background: #540b0e;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 15px auto;
     border: 2px solid black;
-    box-shadow: 10px 5px 5px #333333;
+    /* box-shadow: 10px 5px 5px #333333; */
     overflow-y: scroll;
   }
   
   .card {
     height: 250px;
     margin: 20px;
-    background: green;
+    background: #312244;
+    color: white;
   }
 
   .card-body {
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 1180px) {
+    .index-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /* ---------------------- */
+  /* ---------------------- */
+  /* ---------------------- */
+
 
   /* students page settings */
   .students-main-content {
