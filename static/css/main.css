@@ -32,7 +32,8 @@ body {
   }
   
   header a:hover {
-    opacity: 0.6;
+    /* opacity: 0.6; */
+    color: #881c9b;
   }
   
   footer {
@@ -41,6 +42,10 @@ body {
     color: #5e6472;
     width: 80%;
     border-top: 1px solid #333333;
+    text-align: center;
+  }
+
+  .index-content {
     text-align: center;
   }
   
@@ -63,13 +68,19 @@ body {
     background: green;
   }
 
+  .card-body {
+    justify-content: center;
+    align-items: center;
+  }
+
   /* students page settings */
   .students-main-content {
     width: 78vw;
     height: 80vh;
     background: red;
-    margin: auto;
+    margin: 20px auto;
     display: flex;
+    
   }
 
   .students-main-content button {
@@ -82,6 +93,7 @@ body {
     color: aliceblue;
     padding: 5px;
     justify-content: space-between;
+    margin: 0;
   }
 
   .students-header h1{
@@ -107,29 +119,161 @@ body {
     width: 40%;
   }
 
+  @media (max-width: 1180px) {
+    .students-main-content {
+      flex-direction: column;
+    }
+
+    .house-section {
+      height: 30%;
+      width: 100%;
+      /* transition: 0.6s; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .house-section:hover {
+      width: 100%;
+    }
+
+    .students-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .students-header h1{
+      font-size: 1.8rem;
+      margin: 10px auto;
+    }
+
+    .house-section h2 {
+      display: none;
+    }
+  }
+
   #ravenclaw {
     background-image: url('../images/ravenclaw.jpg');
     background-size:cover;
+    background-position:center;
     color: #f7d308d0;
   }
 
   #hufflepuff {
     background-image: url('../images/hufflepuff.jpg');
     background-size:cover;
-    
+    background-position:center;
   }
 
   #slytherin {
     background-image: url('../images/slytherin.jpg');
     background-size:cover;
     color: antiquewhite;
+    background-position:center;
   }
 
   #gryffindor {
     color: #FFD700;
     background-image: url('../images/gryffindor.jpg');
     background-size:cover;
-
+    background-position:center;
   }
+
+  /* ------------------------- */
+  /* ------------------------- */
+
+
+  /* students by house styling */
+  .students-byhouse-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: aliceblue;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .students-byhouse-header h1 {
+    font-size: 2rem;
+    margin: auto 10px;
+  }
+
+  .students-byhouse-header a {
+    font-size: 1rem;
+    margin: auto 10px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1180px) {
+    .students-byhouse-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      color: aliceblue;
+      padding: 5px;
+      margin: 0;
+      align-items: center;
+    }
+
+    .students-byhouse-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .students-byhouse-header a {
+      font-size: .8rem;
+    }
+  }
+  /* ----------------------- */
+
+  /* staff styling settings */
+
+  .staff-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: aliceblue;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .staff-header h1 {
+    font-size: 1.8rem;
+    margin: auto 10px;
+  }
+
+  .staff-header a {
+    font-size: 1rem;
+    margin: auto 10px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1180px) {
+    .staff-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      color: aliceblue;
+      padding: 5px;
+      /* margin: 0; */
+    }
+
+    .staff-header a {
+      font-size: .8rem;
+    }
+
+    .staff-header h1 {
+      font-size: 1.5rem;
+      
+    }
+  }
+
+
+  /* ---------------------- */
+ 
+
+  
 
   

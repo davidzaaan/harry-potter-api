@@ -1,0 +1,29 @@
+{% extends 'students.html' %}
+{% block header %}
+<header class="staff-header">
+    {% block title %}
+        <a class="bi bi-arrow-left" onclick="history.back()"></a>
+        <h1>Staff</h1>
+    {% endblock title %}
+    <nav>
+    <a href="{{ url_for('index')}}">Home</a>
+    <a href="{{ url_for('students')}}">Hogwarts Students</a>
+    <a href="#">Houses</a>
+    </nav>
+</header>
+{% endblock header %}
+
+
+{% block content %}
+<div class="content">
+        {% for character in context %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{character.name }}</h5>
+                    <p class="card-text">{{ character.species }}</p>
+                    <a href="{{ url_for('character', name=character.name) }}" class="btn btn-warning">See more about {{ character.name }}</a>
+                </div>
+            </div>
+        {% endfor %}
+</div>
+{% endblock content %}

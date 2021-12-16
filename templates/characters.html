@@ -1,6 +1,14 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/characters.css') }}">
 {% extends 'index.html' %}
 {% block header %}
-<h1>Hello characters</h1>
+<header class="students-header">
+    {% block title %}<h1>Hogwarts Characters</h1>{% endblock title %}
+    <nav>
+    <a href="{{ url_for('index')}}">Home</a>
+    <a href="{{ url_for('hogwarts_staff')}}">Hogwarts Staff</a>
+    <a href="#">Houses</a>
+    </nav>
+</header>
 {% endblock header %}
 
 {% block content %}
@@ -11,8 +19,11 @@
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
                 <h5 class="card-title">{{character.name }}</h5>
-                <p class="card-text">{{ character.species }} House: {{ character.house }}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <p class="card-text">{{ character.species }}</p>
+                {% if character.house %}
+                    <p class="card-text">{{ character.house }}</p>
+                {% endif %}
+                <a href="{{ url_for('character', name=character.name) }}" class="btn btn-primary">See more about {{ character.name }}</a>
             </div>
         </div>
         {% endfor %}

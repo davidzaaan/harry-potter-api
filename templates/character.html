@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/character.css') }}">
+{% extends 'students.html' %}
+
+{% block header %}
+<header class="profile-character-header">
+    {% block title %}<h1>{{ title }}</h1>{% endblock title %}
+    <nav>
+    <a class="bi bi-arrow-left" onclick="history.back()"></a>
+    <a href="{{ url_for('index')}}">Home</a>
+    <a href="{{ url_for('hogwarts_staff')}}">Hogwarts Staff</a>
+    <a href="#">Houses</a>
+    </nav>
+</header>
+{% endblock header %}
+
+
+{% block content %}
+    <div class="character-profile">
+        <!--     <div class="profile-background-image">
+        </div> -->
+        <img class="profile-image" src="{{ context.image }}" alt="">
+        <h1 class="profile-header">{{ context.name }}</h1>
+        <div class="description">
+            {% if context.species %}
+            <p>Specie <small>{{ context.species }}</small></p>
+            {% else %}
+            <p>Oops, specie no found </p>
+            {% endif %}
+            {% if context.house %}
+            <p>House <small>{{ context.house }}</small></p>
+            {% else %}
+            <p>Oops, this character doesn't belong to a house</p>
+            {% endif %}
+            {% if context.ancestry %}
+            <p>Ancestry <small>{{ context.ancestry }}</small></p>
+            {% else %}
+            <p>Ancestry not found :(</p>
+            {% endif %}
+            {% if context.gender %}
+            <p>Gender <small>{{ context.gender }}</small></p>
+            {% else %}
+            <p>Gender not found</p>
+            {% endif %}
+            {% if context.patronus %}
+            <p>Patronus <small>{{ context.patronus }}</small></p>
+            {% else %}
+            <p>Oops, this character doesn't have a patronus :(</p>
+            {% endif %}
+            {% if context.actor %}
+            <p>Actor <small>{{ context.actor }}</small></p>
+            {% else %}
+            <p>Actor not found</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
