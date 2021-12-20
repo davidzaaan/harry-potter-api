@@ -29,12 +29,16 @@ def hogwarts_staff():
 @app.route('/<name>/')
 def character(name):
     chars = hogwarts.characters()
-    # for char in chars:
-    #     if char['name'] == name:
-    #         context = char
-    #         break
     context = next(char for char in chars if char['name'] == name)
     return render_template('character.html', context=context)
+
+@app.route('/houses')
+def houses():
+    return render_template('houses.html')
+
+@app.route('/houses/<house_name>')
+def house(house_name):
+    return render_template('house.html', house=house_name)
 
 if __name__ == '__main__':
     app.run(debug=True)

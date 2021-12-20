@@ -294,6 +294,128 @@ body {
 
 
   /* ---------------------- */
+  /* ---------------------- */
+  /* ---------------------- */
+
+  /* hogwarts houses page styling */
+
+  .hogwarts-houses-header {
+    text-align: center;
+    margin: 15px auto;
+  }
+
+
+  /* ----------------------------- */
+  /* ----------------------------- */
+  /* ----------------------------- */
+
+  /* house individual page styling */
+
+  .house-individual-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: aliceblue;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .house-individual-header h1 {
+    font-size: 2rem;
+    margin: auto 10px;
+  }
+
+  .house-individual-header a {
+    font-size: 1rem;
+    margin: auto 10px;
+    cursor: pointer;
+  }
+
+  .house-individual-main-content {
+    width: 70vw;
+    height: 75vh;
+    /* background: #272932; */
+    /* background: #14080E; */
+    background: #1F2421;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    border-radius: 20px;
+  }
+  
+  .house-image {
+    width: 25%;
+    height: 80%;
+    border: 2px solid #FFD639;
+    overflow: hidden;
+  }
+
+  .house-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .house-description {
+    width: 50%;
+    height: 76%;
+    color: #FDF4B0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+    /* margin: ; */
+  }
+
+  .house-description h1, .house-description strong {
+    color: #f7d308d0;
+  }
+
+  @media (max-width: 1180px) {
+    .house-individual-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .house-individual-header h1 {
+      font-size: 1.7rem;
+    }
+
+    .house-individual-header a {
+      font-size: .8rem;
+    }
+
+    .house-individual-main-content {
+      flex-direction: column;
+    }
+
+    .house-image {
+      width: 50%;
+      max-height: 30%;
+      margin: 10px;
+      border-radius: 50%;
+    }
+
+    .house-description {
+      width: 90%;
+    }
+
+    .house-description h1 {
+      font-size: 1.4rem;
+    }
+
+    .house-description p, .house-description strong, .house-description small {
+      font-size: .8rem;
+    }
+  }
+
+  /* --------------------- */
+  /* --------------------- */
+  /* --------------------- */
  
 
   

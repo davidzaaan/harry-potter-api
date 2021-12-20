@@ -1,0 +1,25 @@
+{% extends 'students.html' %}
+{% block header %}
+<h1 class="hogwarts-houses-header">Hogwarts Houses</h1>
+{% endblock header %}
+
+{% block content %} 
+<div class="students-main-content">
+    <div class="house-section" id="gryffindor">
+        <h2>Gryffindor</h2>
+        <a type="button" class="btn btn-warning" href="{{ url_for('house', house_name='gryffindor') }}">See more about Gryffindor</a>
+    </div>
+    <div class="house-section" id="slytherin">
+        <h2>Slytherin</h2>
+        <a type="button" class="btn btn-light" href="{{ url_for('house', house_name='slytherin') }}">See more about Slytherin</a>
+    </div>
+    <div class="house-section" id="hufflepuff">
+        <h2>Hufflepuff</h2>
+        <a type="button" class="btn btn-dark" href="{{ url_for('house', house_name='hufflepuff') }}">See more about Hufflepuff</a>
+    </div>
+    <div class="house-section" id="ravenclaw">
+        <h2>RavenClaw</h2>
+        <a type="button" class="btn btn-primary" href="{{ url_for('house', house_name='ravenclaw') }}">See more about RavenClaw</a>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,76 @@
+{% extends 'students.html' %}
+
+{% block header %}
+<header class="house-individual-header">
+    {% block title %}
+        <a class="bi bi-arrow-left" onclick="history.back()"></a>
+        <h1>{{ house|capitalize }}</h1>
+    {% endblock title %}
+    <nav>
+    <a href="{{ url_for('index')}}">Home</a>
+    <a href="{{ url_for('houses')}}">Houses</a>
+    </nav>
+</header>
+{% endblock header %}
+
+{% block content %}
+<div class="house-individual-main-content">
+    {% if house == 'slytherin' %}
+    <div class="house-image">
+        <img src="../static/images/slytherin.jpg" alt="">
+    </div>
+    <div class="house-description">
+        <h1>{{ house|capitalize }}</h1>
+        <p>
+            Slytherin values ambition, cunning, leadership, and resourcefulness; the Sorting Hat said in Harry Potter and the Philosopher's Stone that Slytherins will do anything to get their way. The house mascot of Slytherin is the serpent, and the house colours are green and silver. 
+            Throughout the series, until the seventh book, the Head of House is Professor Severus Snape. 
+            The ghost of Slytherin house is The Bloody Baron.
+            According to Rowling, Slytherin corresponds roughly to the element of water.
+        </p>
+        <strong>Founder </strong><small>Salazar Slytherin</small>
+    </div>
+    {% elif house == 'gryffindor' %}
+    <div class="house-image">
+        <img src="../static/images/gryffindor.jpg" alt="">
+    </div>
+    <div class="house-description">
+        <h1>{{ house|capitalize }}</h1>
+        <p>
+            Gryffindor values courage, bravery, nerve, and chivalry. Gryffindor's mascot is the lion, and its colours are scarlet red and gold (maroon and gold on the ties and scarves). During the books, the Head of this house is the Transfiguration Professor and Deputy Headmistress, 
+            Minerva McGonagall until she becomes headmistress.
+            The house ghost is Sir Nicholas de Mimsy-Porpington, more commonly known as Nearly Headless Nick.
+            Gryffindor corresponds roughly to the element of fire.
+        </p>
+        <strong>Founder </strong><small>Godric Gryffindor</small>
+    </div>
+    {% elif house == 'ravenclaw' %}
+    <div class="house-image">
+        <img src="../static/images/ravenclaw.jpg" alt="">
+    </div>
+    <div class="house-description">
+        <h1>{{ house|capitalize }}</h1>
+        <p>
+            Ravenclaw values intelligence, learning, wisdom and wit. The house mascot is an eagle and the house colours are blue and bronze (blue and silver in the Harry Potter and Fantastic Beasts films and on the ties and scarves). During the books, the head of this house is the Charms teacher, 
+            Professor Filius Flitwick.
+            The house ghost is the Grey Lady.
+            According to Rowling, Ravenclaw corresponds roughly to the element of air.
+        </p>
+        <strong>Founder </strong><small>Rowena Ravenclaw</small>
+    </div>
+    {% elif house == 'hufflepuff' %}
+    <div class="house-image">
+        <img src="../static/images/hufflepuff.jpg" alt="">
+    </div>
+    <div class="house-description">
+        <h1>{{ house|capitalize }}</h1>
+        <p>
+            Hufflepuff values hard work, patience, justice, and loyalty.
+            The Head of this house is the Herbology Professor Pomona Sprout.
+            The house ghost is the Fat Friar.
+            Hufflepuff corresponds roughly to the element of earth.
+        </p>
+        <strong>Founder </strong><small>Helga Hufflepuff</small>
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}
