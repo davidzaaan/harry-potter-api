@@ -27,4 +27,4 @@ At the homepage you will be presented with 4 different links that will take you 
 
 Thank you for visiting Harry Potter's API. Hope you like it :)
 
-*davidzaaan*
+*David Monroy*
